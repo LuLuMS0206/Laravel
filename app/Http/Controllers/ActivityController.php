@@ -2,63 +2,98 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ActivityController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        return 'El controlador de actividades funciona correctamente';
+        $activities = Auth::user()->activities;
+        return view('activities.index', compact('activities'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        //
+        return view('activities.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+            'datetime' => 'required|date',
+            'paid' => 'boolean',
+            'notes' => 'nullable|string',
+            'satisfaction' => 'nullable|integer|min:0|max:10'
+        ]);
+
+        $validatedData['user_id'] = Auth::id();
+
+
+        Activity::create($validatedData);
+
+        return redirect()->route('activities.index')->with('success', 'Actividad creada con éxito.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+
+    public function show($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        if ($activity->user_id !== Auth::id()) {
+            abort(403); 
+        }
+
+        return view('activities.show', compact('activity'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        if ($activity->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        return view('activities.edit', compact('activity'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        if ($activity->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+
+        $validatedData = $request->validate([
+            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+            'datetime' => 'required|date',
+            'paid' => 'boolean',
+            'notes' => 'nullable|string',
+            'satisfaction' => 'nullable|integer|min:0|max:10'
+        ]);
+
+        $activity->update($validatedData);
+
+        return redirect()->route('activities.index')->with('success', 'Actividad actualizada con éxito.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        if ($activity->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        $activity->delete();
+
+        return redirect()->route('activities.index')->with('success', 'Actividad eliminada con éxito.');
     }
 }
