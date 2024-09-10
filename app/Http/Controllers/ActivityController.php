@@ -11,7 +11,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        //
+        return 'El controlador de actividades funciona correctamente';
     }
 
     /**
