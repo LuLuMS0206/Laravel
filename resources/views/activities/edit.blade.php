@@ -79,6 +79,13 @@
 
             <button type="submit" class="btn btn-primary">Update Activity</button>
         </form>
+
+        <form action="{{ route('activities.destroy', $activity->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this activity?');">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Delete Activity</button>
+        </form>
+
     </div>
 
     <!-- Bootstrap JS and dependencies -->
