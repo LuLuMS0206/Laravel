@@ -30,23 +30,24 @@ class ActivityController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'type' => ['required', 'in:Surf,Windsurf,Kayak,ATV,Hot air baloon'],
-            'dateTime' => ['required', 'date'],
-            'notes' => ['required', 'string', 'max:200'],
-            'paid' => 'boolean',
-            'satisfaction' => 'integer',
-        ]);
+{
+    $validated = $request->validate([
+        'type' => ['required', 'in:Surf,Windsurf,Kayak,ATV,Hot air baloon'],
+        'dateTime' => ['required', 'date'],
+        'notes' => ['required', 'string', 'max:200'],
+        'satisfaction' => ['nullable', 'integer', 'between:1,10'],
+        'paid' => ['sometimes', 'boolean'],
+    ]);
 
-        $activity = Activity::create(array_merge($validated, [
-            'user_id' => Auth::user()->id,
-        ]));
+    $activity = Activity::create(array_merge($validated, [
+        'user_id' => Auth::user()->id,
+    ]));
 
-        $activities = Auth::user()->activities()->get();
+    $activities = Auth::user()->activities()->get();
 
-        return response()->json($activities, 201);
-    }
+    return response()->json($activities, 201);
+}
+
 
     /**
      * Display the specified resource.
