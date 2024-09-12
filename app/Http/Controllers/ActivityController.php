@@ -2,98 +2,107 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Activity;
 use Illuminate\Http\Request;
+use App\Models\Activity;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ActivityController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $activities = Auth::user()->activities;
+        $activities = Auth::user()->activities()->get();
         return response()->json($activities, 200);
     }
 
-
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         return view('activities.create');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
-            'datetime' => 'required|date',
+        $validated = $request->validate([
+            'type' => ['required', 'in:Surf,Windsurf,Kayak,ATV,Hot air baloon'],
+            'dateTime' => ['required', 'date'],
+            'notes' => ['required', 'string', 'max:200'],
             'paid' => 'boolean',
-            'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:0|max:10'
+            'satisfaction' => 'integer',
         ]);
 
-        $validatedData['user_id'] = Auth::id();
+        $activity = Activity::create(array_merge($validated, [
+            'user_id' => Auth::user()->id,
+        ]));
 
+        $activities = Auth::user()->activities()->get();
 
-        Activity::create($validatedData);
-
-        return redirect()->route('activities.index')->with('success', 'Actividad creada con éxito.');
+        return response()->json($activities, 201);
     }
 
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        $activity = Activity::find($id);
 
-    public function show($id)
+        if ($activity) {
+            return response()->json($activity, 200);
+        } else {
+            return response()->json(['message' => 'Activity not found'], 404);
+        }
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
     {
         $activity = Activity::findOrFail($id);
 
-        if ($activity->user_id !== Auth::id()) {
-            abort(403); 
-        }
-
-        return view('activities.show', compact('activity'));
+        return view('activities.edit', ['activity' => $activity]);
     }
 
-    public function edit($id)
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
     {
-        $activity = Activity::findOrFail($id);
-
-        if ($activity->user_id !== Auth::id()) {
-            abort(403);
-        }
-
-        return view('activities.edit', compact('activity'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $activity = Activity::findOrFail($id);
-
-        if ($activity->user_id !== Auth::id()) {
-            abort(403);
-        }
-
-
-        $validatedData = $request->validate([
-            'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
-            'datetime' => 'required|date',
-            'paid' => 'boolean',
-            'notes' => 'nullable|string',
-            'satisfaction' => 'nullable|integer|min:0|max:10'
+        $validated = $request->validate([
+            'type' => ['required', 'in:Surf,Windsurf,Kayak,ATV,Hot air baloon'],
+            'dateTime' => ['required', 'date'],
+            'notes' => ['required', 'string', 'max:200'],
+            'satisfaction' => ['required', 'integer', 'between:0,10'],
         ]);
-
-        $activity->update($validatedData);
-
-        return redirect()->route('activities.index')->with('success', 'Actividad actualizada con éxito.');
+    
+        $validated['paid'] = $request->has('paid') ? true : false;
+    
+        $activity = Activity::findOrFail($id);
+        $activity->update($validated);
+    
+        return response()->json($activity, 200);
     }
 
-    public function destroy($id)
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
     {
-        $activity = Activity::findOrFail($id);
+        $deleted = Activity::destroy($id);
 
-        if ($activity->user_id !== Auth::id()) {
-            abort(403);
+        if ($deleted) {
+            return response()->json(['message' => 'Activity deleted successfully'], 200);
+        } else {
+            return response()->json(['message' => 'Activity not found'], 404);
         }
-
-        $activity->delete();
-
-        return redirect()->route('activities.index')->with('success', 'Actividad eliminada con éxito.');
     }
 }

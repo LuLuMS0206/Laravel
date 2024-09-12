@@ -1,44 +1,51 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Activity</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body>
     <div class="container">
-        <h1>Nueva Actividad</h1>
+        <h1>Create New Activity</h1>
 
         <form action="{{ route('activities.store') }}" method="POST">
             @csrf
 
-            <div class="mb-3">
-                <label for="type" class="form-label">Tipo de Actividad</label>
-                <select name="type" id="type" class="form-control">
-                    <option value="surf">Surf</option>
-                    <option value="windsurf">Windsurf</option>
-                    <option value="kayak">Kayak</option>
-                    <option value="atv">ATV</option>
-                    <option value="hot air balloon">Globo aerostático</option>
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select id="type" name="type" class="form-control" required>
+                    <option value="">Select an option</option>
+                    <option value="Surf">Surf</option>
+                    <option value="Windsurf">Windsurf</option>
+                    <option value="Kayak">Kayak</option>
+                    <option value="ATV">ATV</option>
+                    <option value="Hot air baloon">Hot air baloon</option>
                 </select>
+                @error('type')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
-            <div class="mb-3">
-                <label for="datetime" class="form-label">Fecha y Hora</label>
-                <input type="datetime-local" name="datetime" id="datetime" class="form-control" required>
+            <div class="form-group">
+                <label for="dateTime">Date and Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" class="form-control" required>
+                @error('dateTime')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
-            <div class="mb-3">
-                <label for="paid" class="form-label">¿Pagado?</label>
-                <input type="checkbox" name="paid" id="paid">
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" class="form-control" rows="4" maxlength="200" required></textarea>
+                @error('notes')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
 
-            <div class="mb-3">
-                <label for="notes" class="form-label">Notas</label>
-                <textarea name="notes" id="notes" class="form-control"></textarea>
-            </div>
-
-            <div class="mb-3">
-                <label for="satisfaction" class="form-label">Nivel de Satisfacción (0 a 10)</label>
-                <input type="number" name="satisfaction" id="satisfaction" class="form-control" min="0" max="10">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Crear Actividad</button>
+            <button type="submit" class="btn btn-primary">Create Activity</button>
         </form>
     </div>
-@endsection
+</body>
+</html>
