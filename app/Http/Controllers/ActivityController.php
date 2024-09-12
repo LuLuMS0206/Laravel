@@ -12,7 +12,7 @@ class ActivityController extends Controller
     public function index()
     {
         $activities = Auth::user()->activities;
-        return view('activities.index', compact('activities'));
+        return response()->json($activities, 200);
     }
 
 

@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -32,6 +31,11 @@
             <div class="mb-3">
                 <label for="notes" class="form-label">Notas</label>
                 <textarea name="notes" id="notes" class="form-control"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="satisfaction" class="form-label">Nivel de Satisfacción (0 a 10)</label>
+                <input type="number" name="satisfaction" id="satisfaction" class="form-control" min="0" max="10">
             </div>
 
             <button type="submit" class="btn btn-primary">Crear Actividad</button>

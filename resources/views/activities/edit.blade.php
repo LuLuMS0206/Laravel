@@ -22,7 +22,7 @@
 
             <div class="mb-3">
                 <label for="datetime" class="form-label">Fecha y Hora</label>
-                <input type="datetime-local" name="datetime" id="datetime" class="form-control" value="{{ $activity->datetime }}" required>
+                <input type="datetime-local" id="dateTime" name="dateTime" class="form-control" value="{{ \Carbon\Carbon::parse($activity->dateTime)->format('Y-m-d\TH:i') }}">
             </div>
 
             <div class="mb-3">
