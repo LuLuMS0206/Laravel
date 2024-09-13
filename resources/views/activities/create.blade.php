@@ -55,7 +55,7 @@
             </div>
 
             <div class="form-check">
-                <input type="hidden" name="paid" value="0"> <!-- Hidden field to handle unchecked case -->
+                <input type="hidden" name="paid" value="0"> 
                 <input type="checkbox" id="paid" name="paid" class="form-check-input" value="1">
                 <label for="paid" class="form-check-label">Paid</label>
                 @error('paid')
