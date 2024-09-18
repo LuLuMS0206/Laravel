@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
 
-            $table->dateTime('datetime');
+            $table->dateTime('dateTime');
 
             $table->boolean('paid')->default(false);
 
