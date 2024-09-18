@@ -12,7 +12,6 @@ class amenitiesSeeder extends Seeder
      */
     public function run(): void
     {
-        // Generar 10 registros de amenities con su relación room
         amenities::factory()->count(10)->create();
     }
 }

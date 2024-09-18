@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('guest');
-            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');  // Clave foránea a rooms
-            $table->foreignId('contact_id')->constrained('contacts')->onDelete('cascade');  // Clave foránea a contacts
+            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');  
+            $table->foreignId('contact_id')->constrained('contacts')->onDelete('cascade');  
             $table->date('check_in');
             $table->date('check_out');
             $table->string('room_type');

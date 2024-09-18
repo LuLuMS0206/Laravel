@@ -12,7 +12,6 @@ class roomsSeeder extends Seeder
      */
     public function run(): void
     {
-        // Generar 10 registros de habitaciones usando el factory
         rooms::factory()->count(10)->create();
     }
 }

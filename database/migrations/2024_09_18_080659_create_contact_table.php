@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {  // Cambiar a 'contacts'
+        Schema::create('contacts', function (Blueprint $table) {  
             $table->id();
             $table->string('date');
             $table->string('client_name');

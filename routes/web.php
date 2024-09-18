@@ -1,5 +1,10 @@
 <?php
-
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\OffersController;
+use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\RoomsDetailController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
@@ -10,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index.html', [PageController::class, 'about'])->name('about');
-Route::get('about.html', [PageController::class, 'about'])->name('about');
-Route::get('rooms.html', [PageController::class, 'rooms'])->name('rooms');
-Route::get('roomsDetail.html', [PageController::class, 'roomsDetail'])->name('roomsDetail');
-Route::get('offers.html', [PageController::class, 'offers'])->name('offers');
-Route::get('contact.html', [PageController::class, 'contact'])->name('contact');
+Route::get('index', [ContactController::class, 'index'])->name('index');
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
+Route::get('/roomsDetail', [RoomsDetailController::class, 'index'])->name('rooms.detail');
+Route::get('/offers', [OffersController::class, 'index'])->name('offers');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -24,7 +24,6 @@ class bookings extends Model
         return $this->belongsTo(Contact::class);
     }
 
-    // Relación "muchos a uno" con Room
     public function room()
     {
         return $this->belongsTo(Rooms::class);

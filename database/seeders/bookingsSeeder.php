@@ -12,7 +12,6 @@ class bookingsSeeder extends Seeder
      */
     public function run(): void
     {
-        // Crear 10 reservas usando el factory
         bookings::factory()->count(10)->create();
     }
 }
