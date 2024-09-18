@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {  // Cambiar a 'contacts'
             $table->id();
             $table->string('date');
             $table->string('client_name');
@@ -22,6 +22,8 @@ return new class extends Migration
             $table->enum('status', ['public', 'archived']);
             $table->timestamps();
         });
+        
+        
     }
 
     /**
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('contact');
     }
 };

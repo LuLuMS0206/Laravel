@@ -12,6 +12,7 @@ class ContactSeeder extends Seeder
      */
     public function run(): void
     {
-        Contact::factory()->count(10)->create();  
+        // Generar 10 registros de contacto usando el factory
+        Contact::factory()->count(10)->create();  // Llamar al modelo en mayúsculas
     }
 }

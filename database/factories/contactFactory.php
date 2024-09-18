@@ -8,20 +8,20 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Contact>
  */
-class contactFactory extends Factory
+class ContactFactory extends Factory
 {
-    protected $model = contact::class;
+    protected $model = Contact::class;  // Clase del modelo en mayúsculas
 
     public function definition(): array
     {
         return [
-            'date' => $this->faker->date(),  // Genera una fecha falsa
-            'client_name' => $this->faker->name(),  // Genera un nombre de cliente falso
-            'client_email' => $this->faker->email(),  // Genera un email de cliente falso
-            'client_phone' => $this->faker->phoneNumber(),  // Genera un teléfono de cliente falso
-            'subject' => $this->faker->sentence(),  // Genera un asunto falso
-            'comment' => $this->faker->paragraph(),  // Genera un comentario falso
-            'status' => $this->faker->randomElement(['public', 'archived']),  // Genera un estado falso
+            'date' => $this->faker->date(),
+            'client_name' => $this->faker->name(),
+            'client_email' => $this->faker->email(),
+            'client_phone' => $this->faker->phoneNumber(),
+            'subject' => $this->faker->sentence(),
+            'comment' => $this->faker->paragraph(),
+            'status' => $this->faker->randomElement(['public', 'archived']),
         ];
     }
 }
