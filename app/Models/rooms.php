@@ -18,4 +18,14 @@ class rooms extends Model
         'status',
         'availability',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Bookings::class);
+    }
+
+    public function amenities()
+    {
+        return $this->hasMany(Amenities::class);
+    }
 }

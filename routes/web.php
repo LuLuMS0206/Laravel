@@ -10,6 +10,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('index.html', [PageController::class, 'about'])->name('about');
+Route::get('about.html', [PageController::class, 'about'])->name('about');
+Route::get('rooms.html', [PageController::class, 'rooms'])->name('rooms');
+Route::get('roomsDetail.html', [PageController::class, 'roomsDetail'])->name('roomsDetail');
+Route::get('offers.html', [PageController::class, 'offers'])->name('offers');
+Route::get('contact.html', [PageController::class, 'contact'])->name('contact');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

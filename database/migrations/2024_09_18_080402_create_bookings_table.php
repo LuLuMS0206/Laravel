@@ -14,13 +14,16 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->string('guest');
-            $table->string('check_in');
-            $table->string('check_out');
+            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');  // Clave foránea a rooms
+            $table->foreignId('contact_id')->constrained('contacts')->onDelete('cascade');  // Clave foránea a contacts
+            $table->date('check_in');
+            $table->date('check_out');
             $table->string('room_type');
-            $table->string('special_request')->nullable();
+            $table->text('special_request')->nullable();
             $table->string('status');
-            $table->string('order_date');
+            $table->date('order_date');
             $table->timestamps();
+
         });
     }
 

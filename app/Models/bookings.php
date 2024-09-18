@@ -18,4 +18,16 @@ class bookings extends Model
         'status',
         'order_date',
     ];
+
+    public function contact()
+    {
+        return $this->belongsTo(Contact::class);
+    }
+
+    // Relación "muchos a uno" con Room
+    public function room()
+    {
+        return $this->belongsTo(Rooms::class);
+    }
+
 }

@@ -20,4 +20,9 @@ class Contact extends Model
         'comment',
         'status',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Bookings::class);
+    }
 }
