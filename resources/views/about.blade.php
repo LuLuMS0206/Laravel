@@ -40,7 +40,7 @@
 
                 <div class="header__nav__logo--container font--archivo">
                     <a href="./index.html" class="contents">
-                        <img class="header__nav__logo--container--a--img" src="./assets/imagenes/logoHotel.JPG"
+                        <img class="header__nav__logo--container--a--img" src="./../../public/assets/img/logoHotel.JPG"
                             alt="logo">
                     </a>
                     <div class="header__nav__logo--container--text">
@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="header__nav--icons">
-                    <img src="assets/imagenes/Vector.svg" alt="">
-                    <img class="header__nav--icons--search" src="assets/imagenes/search.svg" alt="">
+                    <img src="./../../public/assets/img/Vector.svg" alt="">
+                    <img class="header__nav--icons--search" src="./../../public/assets/img/search.svg" alt="">
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
             <div class="header__nav-content flex">
                 <div class="space">
                     <a href="./index.html" class="contents">
-                        <img class="header__nav__logo--container--a--img" src="./assets/imagenes/logoHotel.JPG"
+                        <img class="header__nav__logo--container--a--img" src="./../../public/assets/img/logoHotel.JPG"
                             alt="logo">
                     </a>
                 </div>
@@ -107,8 +107,8 @@
                 </ul>
 
                 <div class="header__nav--icons">
-                    <img class="icon" src="assets/imagenes/Vector.svg" alt="">
-                    <img class="icon header__nav--icons--search" src="assets/imagenes/search.svg" alt="">
+                    <img class="icon" src="./../../public/assets/img/Vector.svg" alt="">
+                    <img class="icon header__nav--icons--search" src="./../../public/assets/img/search.svg" alt="">
                 </div>
             </div>
          </nav>
@@ -139,22 +139,22 @@
 
         <div class="about__squares">
             <div class="about__squares__item">
-                <img class="about__squares__item__img" src="assets/imagenes/coffe-about.svg" alt="">
+                <img class="about__squares__item__img" src="./../../public/assets/img/coffe-about.svg" alt="">
                 <p class="about__squares__item__text font--archivo">BREAKFAST</p>
             </div>
 
             <div class="about__squares__item">
-                <img class="about__squares__item__img" src="assets/imagenes/airport.png" alt="">
+                <img class="about__squares__item__img" src="./../../public/assets/img/airport.png" alt="">
                 <p class="about__squares__item__text font--archivo">AIRPORT PICKUP</p>
             </div>
 
             <div class="about__squares__item">
-                <img class="about__squares__item__img" src="assets/imagenes/gps-about.svg" alt="">
+                <img class="about__squares__item__img" src="./../../public/assets/img/gps-about.svg" alt="">
                 <p class="about__squares__item__text font--archivo">CITY GUIDE</p>
             </div>
 
             <div class="about__squares__item">
-                <img class="about__squares__item__img" src="assets/imagenes/room-about.svg" alt="">
+                <img class="about__squares__item__img" src="./../../public/assets/img/room-about.svg" alt="">
                 <p class="about__squares__item__text font--archivo">LUXURY ROOM</p>
             </div>
         </div>
@@ -165,7 +165,7 @@
     <!-- SECTION RESTAURANT -->
     <section class="restaurant">
         <div class="restaurant__img">
-            <img class="restaurant__img__container" src="assets/imagenes/food-restaurant.jpg" alt="">
+            <img class="restaurant__img__container" src="./../../public/assets/img/food-restaurant.jpg" alt="">
         </div>
 
         <div class="restaurant__container">
@@ -200,8 +200,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/icon-facilities.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/icon01-about.svg"
+                                    src="./../../public/assets/img/icon-facilities.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/icon01-about.svg"
                                     alt="">
                             </div>
     
@@ -219,8 +219,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/reloj.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/02.svg"
+                                    src="./../../public/assets/img/reloj.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/02.svg"
                                     alt="">
                             </div>
     
@@ -238,8 +238,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/locations.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/03.svg"
+                                    src="./../../public/assets/img/locations.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/03.svg"
                                     alt="">
                             </div>
     
@@ -257,8 +257,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/cancellation.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/04.svg"
+                                    src="./../../public/assets/img/cancellation.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/04.svg"
                                     alt="">
                             </div>
     
@@ -276,8 +276,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/payment.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/05.svg"
+                                    src="./../../public/assets/img/payment.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/05.svg"
                                     alt="">
                             </div>
     
@@ -295,8 +295,8 @@
                         <div class="facilitiesAbout__container">
                             <div class="facilitiesAbout__container__icons">
                                 <img class="facilitiesAbout__container__icons__icon"
-                                    src="assets/imagenes/special.svg" alt="">
-                                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/06.svg"
+                                    src="./../../public/assets/imgassets/imagenes/special.svg" alt="">
+                                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/06.svg"
                                     alt="">
                             </div>
     
@@ -325,8 +325,8 @@
         <!-- Card 1 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/icon-facilities.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/icon01-about.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/icon-facilities.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/icon01-about.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Have High Rating</p>
@@ -338,8 +338,8 @@
         <!-- Card 2 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/reloj.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/02.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/reloj.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/02.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Quiet Hours</p>
@@ -351,8 +351,8 @@
         <!-- Card 3 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/locations.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/03.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/locations.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/03.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Best Locations</p>
@@ -364,8 +364,8 @@
         <!-- Card 4 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/cancellation.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/04.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/cancellation.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/04.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Free Cancellation</p>
@@ -377,8 +377,8 @@
         <!-- Card 5 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/payment.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/05.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/payment.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/05.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Payment Options</p>
@@ -390,8 +390,8 @@
         <!-- Card 6 -->
         <div class="facilitiesAbout__container">
             <div class="facilitiesAbout__container__icons">
-                <img class="facilitiesAbout__container__icons__icon" src="assets/imagenes/special.svg" alt="">
-                <img class="facilitiesAbout__container__icons__01" src="assets/imagenes/06.svg" alt="">
+                <img class="facilitiesAbout__container__icons__icon" src="./../../public/assets/img/special.svg" alt="">
+                <img class="facilitiesAbout__container__icons__01" src="./../../public/assets/img/06.svg" alt="">
             </div>
             <div class="facilitiesAbout__container__text">
                 <p class="facilitiesAbout__container__text__title font--old">Special Offers</p>
@@ -416,30 +416,30 @@
 
     <div class="counter__facts">
         <div class="counter__facts__fact">
-            <img class="counter__facts__fact__img" src="assets/imagenes/person-counter.svg" alt="">
+            <img class="counter__facts__fact__img" src="./../../public/assets/img/person-counter.svg" alt="">
             <div class="counter__facts__fact__text">
                 <h2 class="counter__facts__fact__text__number font--old">8000</h2>
                 <p class="counter__facts__fact__text__p font--roboto"> Happy Users</p>
             </div>
-            <img class="counter__facts__imgFlecha" src="assets/imagenes/flecha-counter.svg" alt="">
+            <img class="counter__facts__imgFlecha" src="./../../public/assets/img/flecha-counter.svg" alt="">
         </div>
 
         <div class="counter__facts__fact">
-            <img class="counter__facts__fact__img" src="assets/imagenes/star-counter.svg" alt="">
+            <img class="counter__facts__fact__img" src="./../../public/assets/img/star-counter.svg" alt="">
             <div class="counter__facts__fact__text">
                 <h2 class="counter__facts__fact__text__number font--old">10M</h2>
                 <p class="counter__facts__fact__text__p font--roboto"> Reviews & Appriciate</p>
             </div>
-            <img class="counter__facts__imgFlecha" src="assets/imagenes/flecha-counter.svg" alt="">
+            <img class="counter__facts__imgFlecha" src="./../../public/assets/img/flecha-counter.svg" alt="">
         </div>
 
         <div class="counter__facts__fact">
-            <img class="counter__facts__fact__img" src="assets/imagenes/world-counter.svg" alt="">
+            <img class="counter__facts__fact__img" src="./../../public/assets/img/world-counter.svg" alt="">
             <div class="counter__facts__fact__text">
                 <h2 class="counter__facts__fact__text__number font--old">100</h2>
                 <p class="counter__facts__fact__text__p font--roboto"> Country Coverage</p>
             </div>
-            <img class="counter__facts__imgFlecha" src="assets/imagenes/flecha-counter.svg" alt="">
+            <img class="counter__facts__imgFlecha" src="./../../public/assets/img/flecha-counter.svg" alt="">
         </div>
     </div>
 
@@ -448,13 +448,13 @@
         <div class="swiper swiper-pag-about">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="counter__img__room" src="assets/imagenes/room-counter.jpg" alt="">
+                    <img class="counter__img__room" src="./../../public/assets/img/room-counter.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img class="counter__img__room" src="assets/imagenes/room-counter.jpg" alt="">
+                    <img class="counter__img__room" src="./../../public/assets/img/room-counter.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img class="counter__img__room" src="assets/imagenes/room-counter.jpg" alt="">
+                    <img class="counter__img__room" src="./../../public/assets/img/room-counter.jpg" alt="">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -464,8 +464,8 @@
 
     <!-- IMAGENES - DESKTOP -->
     <div class="counter__images">
-        <img class="counter__images__img" src="assets/imagenes/room-counter.jpg" alt="Room Image 1">
-        <img class="counter__images__img" src="assets/imagenes/room-counter.jpg" alt="Room Image 2">
+        <img class="counter__images__img" src="./../../public/assets/img/room-counter.jpg" alt="Room Image 1">
+        <img class="counter__images__img" src="./../../public/assets/img/room-counter.jpg" alt="Room Image 2">
     </div>
 </section>
 <!-- END SECTION COUNTER -->
@@ -479,7 +479,7 @@
             <div class="footer__group">
                 <div>
                     <div class="footer__container">
-                        <img class="footer__container__logo" src="assets/imagenes/logo-footer.JPG" alt="">
+                        <img class="footer__container__logo" src="./../../public/assets/img/logo-footer.JPG" alt="">
                         <div class="footer__container__text">
                             <h2 class="footer__container__text__title font--archivo">HOTEL</h2>
                             <h2 class="footer__container__text__subtitle font--archivo">MIRANDA</h2>
@@ -494,11 +494,11 @@
                         ullamco laboris nisi.</p>
 
                     <div class="footer__logoIcons">
-                        <img class="footer__logoIcons__container" src="assets/imagenes/facebook.svg" alt="">
-                        <img class="footer__logoIcons__container twitter" src="assets/imagenes/twitter.svg" alt="">
-                        <img class="footer__logoIcons__container" src="assets/imagenes/be.svg" alt="">
-                        <img class="footer__logoIcons__container" src="assets/imagenes/linkedin.svg" alt="">
-                        <img class="footer__logoIcons__container" src="assets/imagenes/youtube.svg" alt="">
+                        <img class="footer__logoIcons__container" src="./../../public/assets/img/facebook.svg" alt="">
+                        <img class="footer__logoIcons__container twitter" src="./../../public/assets/img/twitter.svg" alt="">
+                        <img class="footer__logoIcons__container" src="./../../public/assets/img/be.svg" alt="">
+                        <img class="footer__logoIcons__container" src="./../../public/assets/img/linkedin.svg" alt="">
+                        <img class="footer__logoIcons__container" src="./../../public/assets/img/youtube.svg" alt="">
 
                     </div>
                 </div>
@@ -531,7 +531,7 @@
 
                     <div class="footer__contact__container">
                         <div class="footer__contact__container__flex">
-                            <img src="assets/imagenes/phone-footer.svg" alt="">
+                            <img src="./../../public/assets/img/phone-footer.svg" alt="">
                             <div class="footer__contact__container__info">
                                 <p class="footer__contact__container__info__text font--old">Phone Number</p>
                                 <p class="footer__contact__container__info__number font--roboto"> +987 876 765 76 577
@@ -540,7 +540,7 @@
                         </div>
 
                         <div class="footer__contact__container__flex">
-                            <img src="assets/imagenes/mail-footer.svg" alt="">
+                            <img src="./../../public/assets/img/mail-footer.svg" alt="">
                             <div class="footer__contact__container__info">
                                 <p class="footer__contact__container__info__text font--old">Email address</p>
                                 <p class="footer__contact__container__info__number font--roboto">
@@ -551,7 +551,7 @@
                     </div>
 
                     <div class="footer__contact__container__flex">
-                        <img src="assets/imagenes/gps-footer.svg" alt="">
+                        <img src="./../../public/assets/img/gps-footer.svg" alt="">
                         <div class="footer__contact__container__info">
                             <p class="footer__contact__container__info__text font--old">Location</p>
                             <p class="footer__contact__container__info__number font--roboto">Lorem ipsun dolor sit amet,
