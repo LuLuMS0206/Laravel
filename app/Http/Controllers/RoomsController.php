@@ -10,4 +10,9 @@ class RoomsController extends Controller
     {
         return view('rooms');
     }
+
+    public function show()
+    {
+        return view('roomsDetail');
+    }
 }
