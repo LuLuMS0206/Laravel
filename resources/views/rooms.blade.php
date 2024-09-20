@@ -17,7 +17,6 @@
         <div class="roomsPage__grid">
             @foreach($rooms as $room)
                 <div class="roomsPage__cards">
-           
                     <img class="roomsPage__cards__img" src="{{ asset($room->image) }}" alt="{{ $room-> room_number }}">
 
                     <div class="roomsPage__cards__iconGroup">
