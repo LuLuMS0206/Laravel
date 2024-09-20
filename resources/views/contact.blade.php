@@ -56,47 +56,44 @@
             </iframe>
         </div>
 
-        <form class="contact__form">
-            <div class="contact__form__group">
-                <div>
-                    <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/img/personContact.svg') }}"
-                            alt="person" />
-                        <input class="contact__form__container__input font--roboto" type="text"
-                            placeholder="Your Full Name">
-                    </div>
-
-                    <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/img/phone2Contact.svg') }}"
-                            alt="phone" />
-                        <input class="contact__form__container__input" type="text" placeholder="Add phone number">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/img/mail2Contact.svg') }}" alt="email" />
-                        <input class="contact__form__container__input" type="text" placeholder="Enter email address">
-                    </div>
-
-                    <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/img/bookContact.svg') }}"
-                            alt="subject" />
-                        <input class="contact__form__container__input" type="text" placeholder="Enter subject">
-                    </div>
-                </div>
+        <form class="contact__form" action="{{ route('contact.store') }}" method="POST">
+    @csrf 
+    <div class="contact__form__group">
+        <div>
+            <div class="contact__form__container">
+                <img class="contact__form__container__img" src="{{ asset('assets/img/personContact.svg') }}" alt="person" />
+                <input class="contact__form__container__input font--roboto" type="text" name="client__name" placeholder="Your Full Name" required>
             </div>
 
             <div class="contact__form__container">
-                <img class="contact__form__container__img" src="{{ asset('assets/img/pencilContact.svg') }}" alt="edit" />
-                <textarea class="contact__form__container__input contact__form__container__input--textarea"
-                    placeholder="Enter message"></textarea>
+                <img class="contact__form__container__img" src="{{ asset('assets/img/phone2Contact.svg') }}" alt="phone" />
+                <input class="contact__form__container__input" type="text" name="client_phone" placeholder="Add phone number" required>
+            </div>
+        </div>
+
+        <div>
+            <div class="contact__form__container">
+                <img class="contact__form__container__img" src="{{ asset('assets/img/mail2Contact.svg') }}" alt="email" />
+                <input class="contact__form__container__input" type="email" name="client_email" placeholder="Enter email address" required>
             </div>
 
-            <div class="contact__form__btn">
-                <button type="submit" class="button--color button--color--width">SEND</button>
+            <div class="contact__form__container">
+                <img class="contact__form__container__img" src="{{ asset('assets/img/bookContact.svg') }}" alt="subject" />
+                <input class="contact__form__container__input" type="text" name="subject" placeholder="Enter subject" required>
             </div>
-        </form>
+        </div>
+    </div>
+
+    <div class="contact__form__container">
+        <img class="contact__form__container__img" src="{{ asset('assets/img/pencilContact.svg') }}" alt="edit" />
+        <textarea class="contact__form__container__input contact__form__container__input--textarea" name="comment" placeholder="Enter message" required></textarea>
+    </div>
+
+    <div class="contact__form__btn">
+        <button type="submit" class="button--color button--color--width">SEND</button>
+    </div>
+</form>
+
     </section>
     <!-- END SECTION CONTACT -->
 @endsection

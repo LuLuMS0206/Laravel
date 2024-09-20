@@ -14,6 +14,7 @@ Route::resource('activities', ActivityController::class);
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/rooms', [RoomsController::class, 'index'])->name('rooms');
 Route::get('/roomsDetail', [RoomsController::class, 'show'])->name('rooms.detail');
