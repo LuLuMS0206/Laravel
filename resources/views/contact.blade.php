@@ -16,35 +16,35 @@
         <div class="contact__info">
             <div>
                 <div class="contact__info__card">
-                    <img src="{{ asset('assets/imagenes/adressContact.svg') }}" alt="">
+                    <img src="{{ asset('assets/img/adressContact.svg') }}" alt="">
                     <div class="contact__info__card__titles">
                         <p class="contact__info__card__titles__title font--old">Hotel Address</p>
                         <p class="contact__info__card__titles__subtitle font--roboto">19/A, Cirikon City hall Tower New York, NYC</p>
                     </div>
                 </div>
-                <img class="contact__info__0" src="{{ asset('assets/imagenes/01Contact.svg') }}" alt="">
+                <img class="contact__info__0" src="{{ asset('assets/img/01Contact.svg') }}" alt="">
             </div>
 
             <div class="contact__info__2">
                 <div class="contact__info__card">
-                    <img src="{{ asset('assets/imagenes/phoneContact.svg') }}" alt="">
+                    <img src="{{ asset('assets/img/phoneContact.svg') }}" alt="">
                     <div class="contact__info__card__titles">
                         <p class="contact__info__card__titles__title font--old">Phone Number</p>
                         <p class="contact__info__card__titles__subtitle font--roboto">662 321 800</p>
                     </div>
                 </div>
-                <img class="contact__info__0" src="{{ asset('assets/imagenes/02Contact.svg') }}" alt="">
+                <img class="contact__info__0" src="{{ asset('assets/img/02Contact.svg') }}" alt="">
             </div>
 
             <div class="contact__info__3">
                 <div class="contact__info__card">
-                    <img src="{{ asset('assets/imagenes/emailContact.svg') }}" alt="">
+                    <img src="{{ asset('assets/img/emailContact.svg') }}" alt="">
                     <div class="contact__info__card__titles">
                         <p class="contact__info__card__titles__title font--old">Email</p>
                         <p class="contact__info__card__titles__subtitle font--roboto">luciamacho00@gmail.com</p>
                     </div>
                 </div>
-                <img class="contact__info__0" src="{{ asset('assets/imagenes/03Contact.svg') }}" alt="">
+                <img class="contact__info__0" src="{{ asset('assets/img/03Contact.svg') }}" alt="">
             </div>
         </div>
 
@@ -60,14 +60,14 @@
             <div class="contact__form__group">
                 <div>
                     <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/imagenes/personContact.svg') }}"
+                        <img class="contact__form__container__img" src="{{ asset('assets/img/personContact.svg') }}"
                             alt="person" />
                         <input class="contact__form__container__input font--roboto" type="text"
                             placeholder="Your Full Name">
                     </div>
 
                     <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/imagenes/phone2Contact.svg') }}"
+                        <img class="contact__form__container__img" src="{{ asset('assets/img/phone2Contact.svg') }}"
                             alt="phone" />
                         <input class="contact__form__container__input" type="text" placeholder="Add phone number">
                     </div>
@@ -75,12 +75,12 @@
 
                 <div>
                     <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/imagenes/mail2Contact.svg') }}" alt="email" />
+                        <img class="contact__form__container__img" src="{{ asset('assets/img/mail2Contact.svg') }}" alt="email" />
                         <input class="contact__form__container__input" type="text" placeholder="Enter email address">
                     </div>
 
                     <div class="contact__form__container">
-                        <img class="contact__form__container__img" src="{{ asset('assets/imagenes/bookContact.svg') }}"
+                        <img class="contact__form__container__img" src="{{ asset('assets/img/bookContact.svg') }}"
                             alt="subject" />
                         <input class="contact__form__container__input" type="text" placeholder="Enter subject">
                     </div>
@@ -88,7 +88,7 @@
             </div>
 
             <div class="contact__form__container">
-                <img class="contact__form__container__img" src="{{ asset('assets/imagenes/pencilContact.svg') }}" alt="edit" />
+                <img class="contact__form__container__img" src="{{ asset('assets/img/pencilContact.svg') }}" alt="edit" />
                 <textarea class="contact__form__container__input contact__form__container__input--textarea"
                     placeholder="Enter message"></textarea>
             </div>

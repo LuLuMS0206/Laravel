@@ -59,8 +59,8 @@
         <div class="about__us__features__employed">
             <img class="about__us__features--img" src="assets/imagenes/personal-hotel.jpg" alt="">
             <div class="about__us__features--feature">
-                <img src="assets/imagenes/group-color.svg" alt="">
-                <img class="about__us__features--feature--img" src="assets/imagenes/group-white.svg" alt="">
+                <img src="{{ asset('assets/img/group-color.svg') }}" alt="">
+                <img src="{{ asset('assets/img/group-white.svg') }}" class="about__us__features--feature--img"  alt="">
                 <p class="about__us__features--feature--title font--old">Strong Team</p>
                 <p class="about__us__features--feature--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed
@@ -69,9 +69,9 @@
         </div>
 
         <div class="about__us__features__luxuryRoom">
-            <img class="about__us__features--imgLuxury" src="assets/imagenes/hotel-luxury.jpg" alt="">
+            <img class="about__us__features--imgLuxury" src="{{ asset('assets/img/hotel-luxury.jpg') }}"  alt="">
             <div class="about__us__features--luxury--container">
-                <img class="about__us__features--luxury--container--icon" src="assets/imagenes/calendar-luxury.svg"
+                <img class="about__us__features--luxury--container--icon" src="{{ asset('assets/img/calendar-luxury.jpg') }}" 
                     alt="">
                 <p class="about__us__features--luxury--container--title font--old">Luxury Room</p>
                 <p class="about__us__features--luxury--container--text font--roboto">Lorem ipsum dolor sit amet,
@@ -87,101 +87,82 @@
 
     <!-- END SECTION ABOUT-US -->
 
+<!-- SECTION ROOMS -->
+<section class="rooms">
+    <div class="rooms__titles">
+        <p class="rooms__titles--title font--archivo">ROOMS</p>
+        <p class="rooms__titles--subtitle font--old">Hand Picked Rooms</p>
+    </div>
 
-    <!-- SECTION ROOMS -->
-    <section class="rooms">
-        <div class="rooms__titles">
-            <p class="rooms__titles--title font--archivo">ROOMS</p>
-            <p class="rooms__titles--subtitle font--old">Hand Picked Rooms</p>
-        </div>
-
-
-        <!-- Slider main container -->
-        <div class="swiper-arrowTests">
-            <div class="swiper swiper-arrowFacilities">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-
-                        <div class="rooms__container">
-                            <div class="rooms__container--iconGroup">
-                                <img src="assets/imagenes/room.svg" alt="">
-                                <img src="assets/imagenes/wifi.svg" alt="">
-                                <img src="assets/imagenes/car.svg" alt="">
-                                <img src="assets/imagenes/winter.svg" alt="">
-
-                                <img src="assets/imagenes/gym.svg" alt="">
-                                <img src="assets/imagenes/smoke.svg" alt="">
-                                <img src="assets/imagenes/cocktel.svg" alt="">
-                            </div>
-
-                            <img class="rooms__container__doupleRoom" src="assets/imagenes/doupleRoom.png" alt="">
-
-                            <div class="rooms__container--info">
-                                <div class="rooms__container--info--description">
-                                    <h2 class="rooms__container--info--description--title font--old">Minimal Duplex Room
-                                    </h2>
-                                    <p class="rooms__container--info--description--text font--roboto">Lorem ipsum dolor
-                                        sit amet,
-                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore.</p>
-                                </div>
-
-                                <div class="rooms__container--info--price">
-                                    <h2 class="rooms__container--info--price--number font--archivo">$345</h2>
-                                    <p class="rooms__container--info--price--text">/Night</p>
-                                </div>
-
-                            </div>
-
+    <!-- Slider main container -->
+    <div class="swiper-arrowTests">
+        <div class="swiper swiper-arrowFacilities">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="rooms__container">
+                        <div class="rooms__container--iconGroup">
+                            <img src="{{ asset('assets/img/room.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/car.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/winter.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/gym.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/smoke.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/cocktel.svg') }}" alt="">
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="rooms__container">
-                            <div class="rooms__container--iconGroup">
-                                <img src="assets/imagenes/room.svg" alt="">
-                                <img src="assets/imagenes/wifi.svg" alt="">
-                                <img src="assets/imagenes/car.svg" alt="">
-                                <img src="assets/imagenes/winter.svg" alt="">
 
-                                <img src="assets/imagenes/gym.svg" alt="">
-                                <img src="assets/imagenes/smoke.svg" alt="">
-                                <img src="assets/imagenes/cocktel.svg" alt="">
+                        <img class="rooms__container__doupleRoom" src="{{ asset('assets/img/doupleRoom.png') }}" alt="">
+
+                        <div class="rooms__container--info">
+                            <div class="rooms__container--info--description">
+                                <h2 class="rooms__container--info--description--title font--old">Minimal Duplex Room</h2>
+                                <p class="rooms__container--info--description--text font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                             </div>
 
-                            <img class="rooms__container__doupleRoom" src="assets/imagenes/doupleRoom.png" alt="">
-
-                            <div class="rooms__container--info">
-                                <div class="rooms__container--info--description">
-                                    <h2 class="rooms__container--info--description--title font--old">Minimal Duplex Room
-                                    </h2>
-                                    <p class="rooms__container--info--description--text font--roboto">Lorem ipsum dolor
-                                        sit amet,
-                                        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore.</p>
-                                </div>
-
-                                <div class="rooms__container--info--price">
-                                    <h2 class="rooms__container--info--price--number font--archivo">$345</h2>
-                                    <p class="rooms__container--info--price--text">/Night</p>
-                                </div>
-
+                            <div class="rooms__container--info--price">
+                                <h2 class="rooms__container--info--price--number font--archivo">$345</h2>
+                                <p class="rooms__container--info--price--text">/Night</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev swiper-button-prev--izq"></div>
-                <div class="swiper-button-next swiper-button-prev--der"></div>
+                <div class="swiper-slide">
+                    <div class="rooms__container">
+                        <div class="rooms__container--iconGroup">
+                            <img src="{{ asset('assets/img/room.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/car.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/winter.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/gym.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/smoke.svg') }}" alt="">
+                            <img src="{{ asset('assets/img/cocktel.svg') }}" alt="">
+                        </div>
+
+                        <img class="rooms__container__doupleRoom" src="{{ asset('assets/img/doupleRoom.png') }}" alt="">
+
+                        <div class="rooms__container--info">
+                            <div class="rooms__container--info--description">
+                                <h2 class="rooms__container--info--description--title font--old">Minimal Duplex Room</h2>
+                                <p class="rooms__container--info--description--text font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+
+                            <div class="rooms__container--info--price">
+                                <h2 class="rooms__container--info--price--number font--archivo">$345</h2>
+                                <p class="rooms__container--info--price--text">/Night</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev--izq"></div>
+            <div class="swiper-button-next swiper-button-prev--der"></div>
         </div>
+    </div>
+</section>
+<!-- END SECTION ROOMS -->
 
-
-
-    </section>
-    <!-- END SECTION ROOMS -->
 
 
     <!-- SECTION INTRO VIDEO -->
@@ -216,7 +197,7 @@
 
 
 
-    <!-- SECTION FACILITIES -->
+<!-- SECTION FACILITIES -->
 <section class="facilities">
     <div class="facilities__titles">
         <p class="facilities__titles--title font--archivo">Facilities</p>
@@ -232,7 +213,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/icon-facilities.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/icon-facilities.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">01</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -245,7 +226,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/reloj.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/reloj.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">02</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -258,7 +239,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/locations.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/locations.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">03</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -271,7 +252,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/cancellation.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/cancellation.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">04</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -284,7 +265,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/payment.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/payment.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">05</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -297,7 +278,7 @@
                 <div class="swiper-slide">
                     <div class="facilities__container">
                         <div class="facilities__container--icons">
-                            <img class="facilities__container--icons--icon" src="assets/imagenes/special.svg" alt="">
+                            <img class="facilities__container--icons--icon" src="{{ asset('assets/img/special.svg') }}" alt="">
                             <h2 class="facilities__container--icons--number font--archivo">06</h2>
                         </div>
                         <div class="facilities__container--text">
@@ -317,7 +298,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/icon-facilities.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/icon-facilities.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">01</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -329,7 +310,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/reloj.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/reloj.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">02</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -341,7 +322,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/locations.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/locations.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">03</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -353,7 +334,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/cancellation.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/cancellation.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">04</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -365,7 +346,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/payment.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/payment.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">05</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -377,7 +358,7 @@
         <div class="facilities-grid-item">
             <div class="facilities__container">
                 <div class="facilities__container--icons">
-                    <img class="facilities__container--icons--icon" src="assets/imagenes/special.svg" alt="">
+                    <img class="facilities__container--icons--icon" src="{{ asset('assets/img/special.svg') }}" alt="">
                     <h2 class="facilities__container--icons--number font--archivo">06</h2>
                 </div>
                 <div class="facilities__container--text">
@@ -392,158 +373,145 @@
 
 
 
-    <!-- SECTION MENU -->
-    <section class="menu">
-        <div class="menu__img">
-            <img src="assets/imagenes/cookie.svg" alt="">
-        </div>
 
-        <div class="menu__text ">
-            <p class="menu__title font--archivo">MENU</p>
-            <p class="menu__subtitle font--old">Our Foods Menu</p>
-        </div>
+ <!-- SECTION MENU -->
+<section class="menu">
+    <div class="menu__img">
+        <img src="{{ asset('assets/img/cookie.svg') }}" alt="">
+    </div>
 
-        <!-- SLIDER BUTTONS ARROWS -->
-        <div class="swiper-arrows">
-            <div class="swiper swiper-arrow">
+    <div class="menu__text">
+        <p class="menu__title font--archivo">MENU</p>
+        <p class="menu__subtitle font--old">Our Foods Menu</p>
+    </div>
+
+    <!-- SLIDER BUTTONS ARROWS -->
+    <div class="swiper-arrows">
+        <div class="swiper swiper-arrow">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="menu__container">
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/bacon.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Eggs & Bacon</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/coffe.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Tea or Coffee</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/chia2.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Chia Oatmeal</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ********* -->
+                <div class="swiper-slide">
+                    <div class="menu__container">
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/fruit2.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Fruit Parfait</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/marmalade.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Marmalade Selection</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+
+                        <div class="menu__container__menus">
+                            <img class="menu__container__menus__img" src="{{ asset('assets/img/cheeeesse.jpg') }}" alt="">
+                            <div class="menu__container__menus__text">
+                                <p class="menu__container__menus__text__title font--old">Cheese Plate</p>
+                                <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev--disable"></div>
+            <div class="swiper-button-next swiper-button-prev--menu"></div>
+        </div>
+    </div>
+
+    <!-- SLIDER PAGINATION -->
+    <div class="swiper__pagination">
+        <div class="swiper__pagination__desktop">
+            <div class="swiper swiper-pag menu__img__container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <div class="menu__container">
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/bacon.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Eggs & Bacon</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/coffe.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Tea or Coffee</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/chia2.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Chia Oatmeal</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <img class="menu__img__container__cheese" src="{{ asset('assets/img/cheese.webp') }}" alt="">
                     </div>
-                    <!-- ********* -->
                     <div class="swiper-slide">
-                        <div class="menu__container">
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/fruit2.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Fruit Parfait</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/marmalade.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Marmalade Selection</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-
-                            <div class="menu__container__menus">
-                                <img class="menu__container__menus__img" src="assets/imagenes/cheeeesse.jpg" alt="">
-                                <div class="menu__container__menus__text">
-                                    <p class="menu__container__menus__text__title font--old">Cheese Plate</p>
-                                    <p class="menu__container__menus__text__p font--roboto">Lorem ipsum dolor sit amet,
-                                        consectetur adip
-                                        isicing elit, sed do eiusmod tempor.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <img class="menu__img__container__cheese" src="{{ asset('assets/img/marmalade.jpg') }}" alt="">
                     </div>
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev  swiper-button-prev--disable"></div>
-                <div class="swiper-button-next swiper-button-prev--menu"></div>
-            </div>
-        </div>
-
-
-        <!-- SLIDER PAGINATION -->
-        <div class="swiper__pagination">
-            <div class="swiper__pagination__desktop">
-                <div class="swiper swiper-pag menu__img__container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper ">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img class="menu__img__container__cheese" src="assets/imagenes/cheese.webp" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="menu__img__container__cheese" src="assets/imagenes/marmalade.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="menu__img__container__cheese" src="assets/imagenes/yogurr.jpg" alt="">
-                        </div>
-                        ...
+                    <div class="swiper-slide">
+                        <img class="menu__img__container__cheese" src="{{ asset('assets/img/yogurr.jpg') }}" alt="">
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- More slides can be added here -->
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            
         </div>
-        <!-- END SLIDER PAGINATION -->
-    </section>
+    </div>
+    <!-- END SLIDER PAGINATION -->
+</section>
+<!-- END SECTION MENU -->
 
-    <!-- END SECTION MENU -->
 
 
-    <!-- SECTION ICON FEATURES -->
-    <section class="iconFeatures">
-        <div class="iconFeatures__container">
-            <div class="iconFeatures__container__group">
-                <img class="iconFeatures__container__group__img" src="assets/imagenes/nave.svg" alt="">
-                <h1 class="iconFeatures__container__group__title font--roboto">84k+</h1>
-                <p class="iconFeatures__container__group__subtitle font--roboto">Projects are Completed</p>
-            </div>
-
-            <div class="iconFeatures__container__group">
-                <img class="iconFeatures__container__group__img" src="assets/imagenes/persons.svg" alt="">
-                <h1 class="iconFeatures__container__group__title font--roboto">10M+</h1>
-                <p class="iconFeatures__container__group__subtitle font--roboto">Active Backers Around World</p>
-            </div>
-
-            <div class="iconFeatures__container__group">
-                <img class="iconFeatures__container__group__img" src="assets/imagenes/person-price.svg" alt="">
-                <h1 class="iconFeatures__container__group__title font--roboto">02k+</h1>
-                <p class="iconFeatures__container__group__subtitle font--roboto">Categories Served</p>
-            </div>
-
-            <div class="iconFeatures__container__group">
-                <img class="iconFeatures__container__group__img" src="assets/imagenes/book.svg" alt="">
-                <h1 class="iconFeatures__container__group__title font--roboto">100M+</h1>
-                <p class="iconFeatures__container__group__subtitle font--roboto">Idea Raised Funds</p>
-            </div>
-
+<!-- SECTION ICON FEATURES -->
+<section class="iconFeatures">
+    <div class="iconFeatures__container">
+        <div class="iconFeatures__container__group">
+            <img class="iconFeatures__container__group__img" src="{{ asset('assets/img/nave.svg') }}" alt="">
+            <h1 class="iconFeatures__container__group__title font--roboto">84k+</h1>
+            <p class="iconFeatures__container__group__subtitle font--roboto">Projects are Completed</p>
         </div>
-    </section>
-    <!-- END SECTION ICON FEATURES -->
+
+        <div class="iconFeatures__container__group">
+            <img class="iconFeatures__container__group__img" src="{{ asset('assets/img/persons.svg') }}" alt="">
+            <h1 class="iconFeatures__container__group__title font--roboto">10M+</h1>
+            <p class="iconFeatures__container__group__subtitle font--roboto">Active Backers Around World</p>
+        </div>
+
+        <div class="iconFeatures__container__group">
+            <img class="iconFeatures__container__group__img" src="{{ asset('assets/img/person-price.svg') }}" alt="">
+            <h1 class="iconFeatures__container__group__title font--roboto">02k+</h1>
+            <p class="iconFeatures__container__group__subtitle font--roboto">Categories Served</p>
+        </div>
+
+        <div class="iconFeatures__container__group">
+            <img class="iconFeatures__container__group__img" src="{{ asset('assets/img/book.svg') }}" alt="">
+            <h1 class="iconFeatures__container__group__title font--roboto">100M+</h1>
+            <p class="iconFeatures__container__group__subtitle font--roboto">Idea Raised Funds</p>
+        </div>
+    </div>
+</section>
+<!-- END SECTION ICON FEATURES -->
+
 
     @endsection
