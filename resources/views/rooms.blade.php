@@ -15,189 +15,42 @@
         </div>
 
         <div class="roomsPage__grid">
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img"  src="{{ asset('assets/img/room-counter.jpg') }}" alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                    <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+            @foreach($rooms as $room)
+                <div class="roomsPage__cards">
+           
+                    <img class="roomsPage__cards__img" src="{{ asset($room->image) }}" alt="{{ $room-> room_number }}">
+
+                    <div class="roomsPage__cards__iconGroup">
+                        <img src="{{ asset('assets/img/room.svg') }}" alt="Room Icon">
+                        <img src="{{ asset('assets/img/wifi.svg') }}" alt="WiFi Icon">
+                        <img src="{{ asset('assets/img/car.svg') }}" alt="Parking Icon">
+                        <img src="{{ asset('assets/img/winter.svg') }}" alt="Heating Icon">
+                        <img src="{{ asset('assets/img/gym.svg') }}" alt="Gym Icon">
+                        <img src="{{ asset('assets/img/smoke.svg') }}" alt="No Smoking Icon">
+                        <img src="{{ asset('assets/img/cocktel.svg') }}" alt="Cocktail Icon">
                     </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img" src="{{ asset('assets/img/room-counter.jpg') }}" alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
+
+                    <div class="roomsPage__cards__info">
+                        <div class="roomsPage__cards__info__description">
+                    
+                            <h2 class="roomsPage__cards__info__description__title font--old">{{ $room-> room_number }}</h2>
+                
+                            <p class="roomsPage__cards__info__description__p font--roboto">{{ $room->room_type }}</p>
+                        </div>
+
+                        <div class="roomsPage__cards__info__price">
+                    
+                            <h2 class="roomsPage__cards__info__price__number font--archivo">${{ $room->price }}/Night</h2>
+                            
+                            <a href="{{ url('rooms/' . $room->id) }}">
+                                <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img" src="{{ asset('assets/img/room-counter.jpg') }}" alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img" src="{{ asset('assets/img/room-counter.jpg') }}" alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img" src="{{ asset('assets/img/room-counter.jpg') }}" alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-    
-            <div class="roomsPage__cards">
-                <img class="roomsPage__cards__img" src="{{ asset('assets/img/room-counter.jpg') }}"  alt="">
-    
-                <div class="roomsPage__cards__iconGroup">
-                <img src="{{ asset('assets/img/room.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/wifi.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/car.svg') }}" alt="">
-                    <img src="{{ asset('assets/img/winter.svg') }}"  alt="">
-    
-                    <img src="{{ asset('assets/img/gym.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/smoke.svg') }}"  alt="">
-                    <img src="{{ asset('assets/img/cocktel.svg') }}"  alt="">
-                </div>
-    
-                <div class="roomsPage__cards__info">
-                    <div class="roomsPage__cards__info__description">
-                        <h2 class="roomsPage__cards__info__description__title font--old">Minimal Duplex Room</h2>
-                        <p class="roomsPage__cards__info__description__p font--roboto">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                    </div>
-    
-    
-                    <div class="roomsPage__cards__info__price">
-                        <h2 class="roomsPage__cards__info__price__number font--archivo">$345/Night</h2>
-                        <a href="roomsDetail.html">
-                            <button class="roomsPage__cards__info__price__btn font--archivo">Booking now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
+            @endforeach
         </div>
- 
+
         <div class="roomsPage__pagination">
             <img src="{{ asset('assets/img/Pagination.svg') }}"  alt="">
         </div>
