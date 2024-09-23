@@ -86,7 +86,7 @@
 
     <div class="contact__form__container">
         <img class="contact__form__container__img" src="{{ asset('assets/img/pencilContact.svg') }}" alt="edit" />
-        <textarea class="contact__form__container__input contact__form__container__input--textarea" name="comment" placeholder="Enter message" required></textarea>
+        <textarea class="contact__form__container__input contact__form__container__input--textarea" name="comments" placeholder="Enter message" required></textarea>
     </div>
 
     <div class="contact__form__btn">
@@ -97,3 +97,27 @@
     </section>
     <!-- END SECTION CONTACT -->
 @endsection
+
+<script>
+    @if(session('success'))
+        Toastify({
+            text: "{{ session('success') }}",
+            duration: 3000, 
+            close: true,   
+            gravity: "top", 
+            position: "right", 
+            backgroundColor: "#4CAF50", 
+        }).showToast();
+    @endif
+
+    @if(session('error'))
+        Toastify({
+            text: "{{ session('error') }}",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#f44336", 
+        }).showToast();
+    @endif
+</script>

@@ -20,4 +20,17 @@ class RoomsController extends Controller
     {
         return view('roomsDetail');
     }
+
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query'); 
+
+
+        $rooms = Rooms::where('room_type', 'like', '%' . $query . '%')
+                      ->orWhere('room_number', 'like', '%' . $query . '%')
+                      ->get();
+
+        return view('rooms', ['rooms' => $rooms]);
+    }
 }

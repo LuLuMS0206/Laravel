@@ -24,6 +24,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/js/swiper.js') }}" defer></script>
     <script src="{{ asset('assets/js/navbarHamb.js') }}" defer></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+
 </head>
 
     <body class="font-sans antialiased">
@@ -114,6 +119,7 @@
             <!-- Page Content -->
             <main>
             @yield('content')
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
             </main>
 
 
@@ -204,5 +210,8 @@
 </footer>
 <!-- END FOOTER -->
         </div>
+
+      
+
     </body>
 </html>

@@ -5,6 +5,12 @@
     <!-- SECTION ROOMS PAGE -->
     <section class="roomsPage">
 
+     <!-- Formulario de búsqueda -->
+     <form action="{{ route('rooms.search') }}" method="GET" class="roomsPage__searchForm">
+        <input type="text" name="query" placeholder="Search rooms..." value="{{ request('query') }}">
+        <button type="submit">Search</button>
+    </form>
+
         <div class="roomsPage__content">
             <p class="roomsPage__content__title font--archivo">THE ULTIMATE LUXURY</p>
             <p class="roomsPage__content__subtitle font--old">Ultimate Room</p>
