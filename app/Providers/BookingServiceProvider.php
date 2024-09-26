@@ -18,7 +18,7 @@ class BookingServiceProvider extends ServiceProvider
         $this->app->bind('BookingNotification', function() {
             return new class {
                 public function notifyAdmin($booking) {
-                    File::append(storage_path('logs/bookings.log'), 'Nueva reserva: ' . json_encode($booking) . "\n");
+                    // File::append(storage_path('logs/bookings.log'), 'Nueva reserva: ' . json_encode($booking) . "\n");
                 }
             };
         });
